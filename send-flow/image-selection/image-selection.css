@@ -1,0 +1,50 @@
+.image-grid {
+	margin: 0;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+
+}
+
+.image-grid img {
+	width:20%;
+	cursor: pointer;
+	padding:5px;
+	
+}
+
+
+.grid-box {
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 0;
+
+}
+.selectedimage{
+	opacity: 0;
+	cursor: default;
+}
+
+.space {
+	width:3em;
+	height: 3em;
+	margin: 5px;
+	border:1px solid white;
+	display: inline-block;
+	border-radius: 1px;
+}
+.space img {
+	width:3em;
+	height:3em;
+	cursor: pointer;
+}
+.selectedimages{
+	cursor: default;
+}
+#content {
+	top:10%;
+}
+.arrow {
+	width:2em;
+	margin: 0 1em;
+}

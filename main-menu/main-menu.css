@@ -1,0 +1,14 @@
+#collections {
+	position:fixed;
+	padding: 0.5em;
+	opacity: 0.8;
+	bottom: 0;
+	right: 0;
+}
+#android {
+	padding: 0.5em;
+	opacity: 0.8;
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+}

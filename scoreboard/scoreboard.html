@@ -1,0 +1,17 @@
+<h1>Games you've made</h1>
+<div class="scorePanel" ng-repeat="game in games track by $index">
+	<table>
+		<tr>
+			<th>Category:</th>
+			<td>{{game.category.categoryname}}</td>
+		</tr>
+		<tr>
+			<th>This game has been won:</th>
+			<td>{{game.wins}} times</td>
+		</tr>
+		<tr>
+			<th>This game has been lost:</th>
+			<td>{{game.losses}} times</td>
+		</tr>
+	</table>
+</div>

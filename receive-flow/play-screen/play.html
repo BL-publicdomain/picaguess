@@ -1,0 +1,13 @@
+
+	<img ng-repeat="image in images track by $index" src="{{image.flickr_thumb_jpeg}}" class="image">
+	<div id="spaces">
+		<div>
+			What category do these images belong to?
+		</div>
+		<div class="space" ng-click="spaceClicked($index)" ng-repeat="i in wordArray track by $index">{{i}}</div>
+	</div>
+	<div id="letters">
+		<div class="letter" ng-class="{selectedLetter:letters[$index].selected}" ng-click="letterClicked($index)" ng-repeat="letter in letters track by $index">{{letter.letter}}</div>
+		<div class="hint-button" ng-class="{hintButtonDisabled:!canUseHint()}" ng-click="hintClicked()">Hint (-1 credit)</div>
+		<button class="main-button" ng-click="giveUpClicked()">Give Up</button>
+	</div>

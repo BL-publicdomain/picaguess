@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>PicaGuess</title>
+</head>
+<body ng-cloak>
+	<div ng-controller="LoadingController" ng-show="loading" id="loading">
+		<img src="res/img/loading.gif">
+	</div>
+	<img id="tag" src="res/img/tag.svg">	
+	<div ng-controller="CreditsController" id="credits">
+		Credits: {{credits}}
+	</div>
+	<div id="content">
+		<div ng-view></div>
+	</div>
+	<script src="/lib/jquery.js"></script>
+	<script src="/lib/angular.js"></script>
+	<script src="/lib/angular-route.js"></script>
+	<script src="/lib/route-styles.js"></script>
+	<script src="/app.js"></script>
+	<script src="/model/game-api-model.js"></script>
+	<script src="/model/game-model.js"></script>
+	<script src="/model/scored-game-model.js"></script>
+	<script src="/model/sent-games-model.js"></script>
+	<script src="/components/credits/credits-model.js"></script>
+	<script src="/components/credits/credits-controller.js"></script>
+	<script src="/components/loading/loading-model.js"></script>
+	<script src="/components/loading/loading-controller.js"></script>
+	<script src="/receive-flow/play-screen/play-controller.js"></script>
+	<script src="/receive-flow/play-finished/play-finished-controller.js"></script>
+	<script src="/send-flow/category-selection/category-selection-controller.js"></script>
+	<script src="/send-flow/image-selection/image-selection-controller.js"></script>
+	<script src="/send-flow/confirmation/confirmation-controller.js"></script>
+	<script src="/scoreboard/scoreboard-controller.js"></script>
+</body>
+</html>

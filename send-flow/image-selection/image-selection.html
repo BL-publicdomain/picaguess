@@ -1,0 +1,18 @@
+<h1>Select Images:</h1>
+<p>Please select four images that fall under the category {{categoryName}}</p>
+	<div id="slidecontainer" class="grid-box">
+		<div id="firstslide" class="image-grid">
+			<img ng-click="clickedImage($index)" ng-class="{selectedimage:visibleImages[$index].selected}" ng-repeat="imageURL in visibleImages track by $index" ng-src="{{imageURL.flickr_thumb_jpeg}}">
+		</div>
+		<div id="secondslide" class="image-grid">
+			<img ng-repeat="imageURL in hiddenImages" ng-src="{{imageURL.flickr_thumb_jpeg}}">
+		</div>
+	</div>
+<div>
+	<img ng-click="previousClicked()" class="arrow" src="/res/img/button-arrow-left.svg">
+	<img ng-click="nextClicked()" class="arrow" src="/res/img/button-arrow-right.svg">
+<div id="spaces">
+	<div class="space" ng-click="spaceClicked($index)" ng-repeat="image in targetimages track by $index"><img ng-show="image.flickr_original_jpeg!=null" src="{{image.flickr_thumb_jpeg}}"></div>
+</div>
+</div>
+<button id="done-button" class="main-button" ng-click="doneClicked()" ng-class="{disabledButton:!canProgress}">Done</button>

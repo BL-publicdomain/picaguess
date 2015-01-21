@@ -1,0 +1,4 @@
+<h1>Select a Category:</h1>
+<button ng-repeat="category in categories track by $index" ng-click="categorySelected(category)" class="main-button">
+	{{category.categoryname}}
+</button>
